@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-in class to be used on elements */
+.fade-in {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1s ease-in forwards; /* Apply fade-in animation */
+}
+body,
+html {
+  /* Ensure the body and html take full height */
+  height: 100%;
+  margin: 0;
+  font-family: 'Red Hat Display';
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  /* Set a fallback background color */
+  background-color: black;
+}
+
+.background {
+  background-attachment: fixed;
+  background-image: url('essay-gettyimages-1237093074.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed; /* Keep background fixed while scrolling */
+  height: 100vh;
+  width: 100%;
+  filter: brightness(25%);
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center items horizontally */
+  height: 100vh;
+  position: relative;
+  padding-top: 20px;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 0.5s ease-in forwards; /* Apply fade-in animation */
+}
+
+.navbar {
+  display: flex;
+  gap: 50px;
+  margin-top: 5px; /* Adjust as needed for spacing from the top */
+}
+
+.nav-button {
+  padding: 12px 20px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Red Hat Display';
+  font-weight: 600;
+  font-size: 20px;
+  width: 180px;
+  border-radius: 800px;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero-text {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0; /* Remove padding to minimize hover area */
+  display: inline-block; /* Restrict hover area to text content */
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.hero-text:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* White shadow */
+  transform: translateY(-5px); /* Raised effect */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  margin-top: 50px; /* Adjusts space from the top */
+}
+
+.row {
+  display: flex;
+  gap: 650px; /* Space between the cards */
+  justify-content: center; /* Center the row */
+}
+
+.black_hole {
+  margin-left: -100px; /* Move the Black Holes card to the left */
+  width: 500px;
+}
+
+.black_hole a {
+  margin-left: 110px;
+}
+
+.cards {
+  font-size: 25px;
+  color: white;
+  margin-left: 20px; /* Adds space to the left */
+  box-sizing: border-box;
+  position: relative;
+  top: -450px; /* Moves the element upwards */
+  margin-left: -20px;
+  text-align: center;
+}
+
+.cards a {
+  color: white;
+  text-decoration: none;
+  border: white 2px solid;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6px 20px;
+  line-height: normal;
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-radius: 600px;
+}
+
+.cards a:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+  transform: translateY(-5px);
+  background-color: rgb(223, 223, 223);
+  color: black;
+}
+
+.cards a h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.cards p {
+  margin-top: 15px;
+  width: 600px; /* Adjust width to fit within card */
+}
+
+.cards p:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nebula-card {
+  margin-top: 100px;
+}
+
+.nebula-card a {
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.nebula-card p {
+  text-align: left;
+  text-wrap: pretty;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure the card takes the full width */
+  margin-left: 100px;
+  margin-right: 200px;
+  max-width: 1750px;
+  text-align: center; /* Align text to the center */
+}
+
+.videos {
+  margin-top: -190px; /* Adjust the space below the Nebula card */
+  text-align: center;
+  width: 100%; /* Ensure it takes the full width */
+  text-decoration: underline;
+}
+
+.videos h2 {
+  position: relative; /* Ensure the text is positioned in normal flow */
+  z-index: 1; /* Make sure it's above other content */
+  pointer-events: auto; /* Allow text selection */
+  overflow: visible; /* Ensure text is not clipped */
+}
+
+.video-links {
+  display: grid;
+  grid-template-columns: repeat(3, 400px); /* 3 columns, each 400px wide */
+  grid-template-rows: repeat(2, 400px); /* 3 rows, each 400px tall */
+  gap: 100px; /* Space between grid items */
+  justify-content: center; /* Center the grid horizontally within the container */
+  align-items: center; /* Center the grid items vertically */
+  margin-top: -120px; /* Space above the grid (adjust this to decrease the gap) */
+  margin-left: 160px;
+}
+
+.button-container {
+  display: contents; /* Ensure buttons are placed directly in the grid */
+}
+
+.button-container a {
+  display: block; /* Ensure buttons occupy full width of their grid cell */
+  width: 200px; /* Full width of the grid cell */
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none; /* Remove underline */
+  border: 2px solid white;
+  padding: 8px 12px;
+  border-radius: 600px;
+  height: 30px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 10px; /* Decrease the space between the buttons and the text below */
+}
+
+.button-container a:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.images {
+  display: contents; /* Ensure images are placed directly in the grid */
+}
+
+.black-hole-image,
+.supernova-image,
+.nebula-image {
+  width: 100%; /* Full width of the grid cell */
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-top: -630px; /* Decrease the space between the images and the buttons above */
+  margin-left: -100px;
+}
+
+.nebula-image {
+  height: 270px;
+  width: auto;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-top: -630px; /* Decrease the space between the images and the buttons above */
+  margin-left: -100px;
+}
+
+.bottom-navbar {
+  margin-top: -100px;
+  gap: 130px;
+  height: 50px;
+  padding-bottom: 150px;
+}
+
+.nav-bottom {
+  padding: 12px 20px 50px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Red Hat Display';
+  font-weight: 600;
+  font-size: 28px;
+  width: 220px;
+  height: 60px;
+  border-radius: 800px;
+}
+
+.nav-bottom:hover {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+.bottom-text {
+  text-wrap: nowrap;
+  margin-top: -500px;
+  font-size: 35px;
+  text-align: center;
+  margin-left: 120px;
+}
+
+.quiz-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.quiz-button {
+  color: white;
+  background-color: transparent;
+  border: 3px solid white;
+  padding: 12px 20px;
+  font-size: 25px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 100px;
+  margin-bottom: 200px;
+}
+
+.quiz-button:hover {
+  background-color: white;
+  color: black;
+  font-weight: 800;
+}
+
+/* Black Hole page 👇👇👇👇 */
+
+.black-hole-text {
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 0; /* Remove padding to minimize hover area */
+  display: inline-block; /* Restrict hover area to text content */
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.black-hole-text:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* White shadow */
+  transform: translateY(-5px); /* Raised effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
